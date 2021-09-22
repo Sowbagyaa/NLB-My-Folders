@@ -135,6 +135,10 @@ body {
 
 }
 
+.drp-down i:hover, .info i:hover{
+    cursor: pointer;
+}
+
 .drp-down {
     width: 196px;
     height: 104px;
