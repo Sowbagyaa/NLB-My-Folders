@@ -289,7 +289,7 @@ padding-left: 16px; */
 
     width: 40px;
     height: 40px;
-    background: #264EA2;
+    /* background: #264EA2; */
     vertical-align: middle;
     font-family: Helvetica Neue;
     font-style: normal;
@@ -300,10 +300,11 @@ padding-left: 16px; */
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-decoration: none;
-    color: white;
+    border: 2px solid #264EA2;
+    color: #264EA2;
 }
 
-.sort span {
+.sort span  {
     border: 2px solid #264EA2;
     box-sizing: border-box;
     background-color: transparent;
@@ -320,6 +321,14 @@ padding-left: 16px; */
     padding: 10px;
 }
 
+.sort span>a{
+    text-decoration: none;
+}
+.updated-text:hover, .sort span:hover{
+    background-color: #264EA2;
+    color: white;
+    cursor: pointer;
+}
 .create-folder {
     float: right;
     position: relative;
@@ -438,6 +447,7 @@ padding-left: 16px; */
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+
 }
 
 .card-text .bi {
@@ -462,11 +472,6 @@ padding-left: 16px; */
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    /* identical to box height */
-
-
-    /* NLB/Text Black */
-
     color: rgba(0, 0, 0, 0.6);
 }
 
