@@ -397,7 +397,6 @@ padding-left: 16px; */
 
 .card {
     padding: 0px !important;
-    
     width: 245px;
     height: auto;
     border: 8px double #264EA2 !important;
@@ -469,6 +468,7 @@ padding-left: 16px; */
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    
 
 }
 
@@ -711,9 +711,15 @@ padding-left: 16px; */
     letter-spacing: 0.2px;
     color: #EAEAEA;
 }
-
+       
 @media (max-width: 720px) {
-    
+    .flexColumn {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .flexColumn img{
+        margin-top: 4px;
+    }
   }
        
   @media (max-width: 420px) {
@@ -722,7 +728,7 @@ padding-left: 16px; */
       max-width: 100%;
     }
     .flexColumn img{
-        margin: 4px;
+        margin-top: 4px;
     }
   }
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -733,13 +739,7 @@ padding-left: 16px; */
         max-width: 50%;
     }
 
-    .flexColumn {
-      flex: 50%;
-      max-width: 50%;
-    }
-    .flexColumn img{
-        margin: 4px;
-    }
+  
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -750,13 +750,7 @@ padding-left: 16px; */
         max-width: 100%;
     }
 
-    .flexColumn {
-        flex: 100%;
-        max-width: 100%;
-      }
-      .flexColumn img{
-          margin: 5px;
-      }
+
 }
 
 @media (max-width: 768px) {
@@ -771,14 +765,7 @@ padding-left: 16px; */
     .a {
         margin: 0;
     }
-    .flexColumn {
-        flex: 33.3%;
-        max-width: 33.3%;
-      }
-      .flexColumn img{
-          margin: 5px;
-      }
-
+   
 }
 
  
