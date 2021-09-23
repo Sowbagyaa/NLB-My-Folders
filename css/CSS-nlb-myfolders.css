@@ -384,21 +384,20 @@ padding-left: 16px; */
     object-fit: cover;
 }
 
-.my-row {
+ .my-row {
     background-size: cover;
     background-repeat: no-repeat;
-    /* margin-top: 300px; */
     object-fit: cover;
 }
 
 .my-col,
 .card-body {
     width: 265px;
-}
+} 
 
 .card {
     padding: 0px !important;
-    /* margin: 0px 10px 10px 0; */
+    
     width: 245px;
     height: auto;
     border: 8px double #264EA2 !important;
@@ -420,15 +419,34 @@ padding-left: 16px; */
 
 }
 
-.col-md {
-    /* width: 200px !important; */
+.flexRow {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 30px; */
+    clear: right;
+    margin: 0px 65px 0 83px;
+  }
+  
+  /* Create four equal columns*/
+  .flexColumn {
+    flex: 25%;
+    max-width: 25%;
+  }
+  
+  .flexColumn .card {
+    vertical-align: middle;
+    margin:10px;
+  }
+
+/* .col-md {
+   
     padding: 0px !important;
     margin: 0px !important;
     border: none !important;
     justify-content: stretch !important;
     margin-right: 10px !important;
-    /* margin-bottom: 5px !important; */
-}
+    
+} */
 .explore-text  {
     width: 216px;
     height: 117px;
@@ -440,9 +458,9 @@ padding-left: 16px; */
     color: #222222;
 }
 
-#r2-card1 {
+/* #r2-card1 {
     margin-top: -120px !important;
-}
+} */
 
 .card-title {
     font-family: Helvetica Neue;
@@ -694,12 +712,33 @@ padding-left: 16px; */
     color: #EAEAEA;
 }
 
+@media (max-width: 720px) {
+    
+  }
+       
+  @media (max-width: 420px) {
+    .flexColumn {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .flexColumn img{
+        margin: 4px;
+    }
+  }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
+    }
+
+    .flexColumn {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .flexColumn img{
+        margin: 4px;
     }
 }
 
@@ -710,6 +749,14 @@ padding-left: 16px; */
         flex: 100%;
         max-width: 100%;
     }
+
+    .flexColumn {
+        flex: 100%;
+        max-width: 100%;
+      }
+      .flexColumn img{
+          margin: 5px;
+      }
 }
 
 @media (max-width: 768px) {
@@ -724,5 +771,15 @@ padding-left: 16px; */
     .a {
         margin: 0;
     }
+    .flexColumn {
+        flex: 33.3%;
+        max-width: 33.3%;
+      }
+      .flexColumn img{
+          margin: 5px;
+      }
 
 }
+
+ 
+  
