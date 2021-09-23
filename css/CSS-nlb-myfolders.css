@@ -13,6 +13,12 @@ body {
     background: white;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
         Helvetica, Arial, "Lucida Grande", sans-serif;
+        /* overflow-x: hidden; */
+        scrollbar-width: none;
+        
+}
+.body::-webkit-scrollbar {
+    display: none;
 }
 
 .wrapper {
@@ -26,8 +32,8 @@ body {
 .agency-title {
     font-family: Helvetica Neue;
     height: 32px;
-    background: #F0F0F0;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     padding-left: 85px;
 }
@@ -37,20 +43,20 @@ body {
     height: 15px;
     left: 2px;
     top: 1px;
+    /* float: left; */
 }
 
-.agency-title span {
-    position: absolute;
+.agency-title p {
     width: 239px;
     height: 15px;
-    left: 106px;
-    top: 9px;
     font-family: Helvetica Neue;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    color: #000000;
+    color: black;
+    /* float: left; */
+    padding: 6px;
 }
 
 .navigation-bar {
@@ -60,6 +66,7 @@ body {
     align-items: center;
     background-color: #264EA2;
     justify-content: space-between;
+    clear: both;
 
 }
 
@@ -176,9 +183,9 @@ div.card {
     display: flex;
     justify-content: space-between;
     left: 0px;
-    height: 44px;
+    height: auto;
     padding: 12px 83px;
-    background-color: pink;
+    background-color: #F0F0F0;;
     margin: 0 auto;
 }
 
@@ -402,7 +409,10 @@ padding-left: 16px; */
     border: 8px double #264EA2 !important;
     border-top: none !important;
     border-left: none !important;
+    margin-top: 20px;;
+    
 }
+
 
 .col {
     margin: 0px !important;
@@ -418,16 +428,14 @@ padding-left: 16px; */
 
 }
 
-.flexRow {
+/* .flexRow {
     display: flex;
     flex-wrap: wrap;
     /* padding: 0 30px; */
-    clear: right;
-    margin: 0px 65px 0 83px;
-  }
+   
   
   /* Create four equal columns*/
-  .flexColumn {
+  /* .flexColumn {
     flex: 25%;
     max-width: 25%;
   }
@@ -435,9 +443,9 @@ padding-left: 16px; */
   .flexColumn .card {
     vertical-align: middle;
     margin:10px;
-  }
+  } */
 
-/* .col-md {
+.col-md {
    
     padding: 0px !important;
     margin: 0px !important;
@@ -445,7 +453,7 @@ padding-left: 16px; */
     justify-content: stretch !important;
     margin-right: 10px !important;
     
-} */
+}
 .explore-text  {
     width: 216px;
     height: 117px;
@@ -457,9 +465,9 @@ padding-left: 16px; */
     color: #222222;
 }
 
-/* #r2-card1 {
+#r2-card1 {
     margin-top: -120px !important;
-} */
+}
 
 .card-title {
     font-family: Helvetica Neue;
@@ -607,6 +615,11 @@ padding-left: 16px; */
     margin-left: 5px;
 }
 
+/* .publishers, .organisations, .get-involved, .about{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+} */
 .nav-col {
     display: flex;
     flex-direction: column;
@@ -643,11 +656,15 @@ padding-left: 16px; */
     width: inherit;
     height: auto;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #264EA2;
 }
 
+.img-wrap img{
+    margin-right: 20px;
+}
 .footer-lower #brand1 {
     width: 36.76px;
     height: 50.06px;
@@ -682,7 +699,6 @@ padding-left: 16px; */
     display: flex;
     flex-direction: column;
     text-align: right;
-
 }
 
 .copyrights p {
@@ -712,32 +728,21 @@ padding-left: 16px; */
     color: #EAEAEA;
 }
        
-@media (max-width: 720px) {
-    .flexColumn {
-      flex: 50%;
-      max-width: 50%;
-    }
-    .flexColumn img{
-        margin-top: 4px;
-    }
-  }
-       
-  @media (max-width: 420px) {
-    .flexColumn {
-      flex: 100%;
-      max-width: 100%;
-    }
-    .flexColumn img{
-        margin-top: 4px;
-    }
-  }
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
+@media screen and (max-width: 1024px) {
+    .column{
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
     }
+    .explore-folders-wrapper{
+        padding-right: 83px;
+    }
+    
+    /* .col-md{
+        flex: 33.3%;
+        max-width: 50%;
+    } */
 
   
 }
@@ -749,7 +754,195 @@ padding-left: 16px; */
         flex: 100%;
         max-width: 100%;
     }
+    .navigation-bar{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        
+       
+    }
+    .agency-title {
+   
+        height: auto;
+        background: #F0F0F0;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        
+    }
+    .agency-title span {
+        position: relative;
+        /* width: 100%; */
+        height: 15px;
+        font-family: Helvetica Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+    }
+    .nlb-heading{
+        text-align: center;
+        margin: 8px;
+    }
+     .drp-down, .one-search{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .info{
+        text-align: center;
+        display: inline;
+    }
+    .myfolders-main {
+        margin: 0 auto;
+        height: auto;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+      
+    }
+    .explore-folders-wrapper {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        /* padding: 100px 0 100px 0; */
+        background: #F5F5F5;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    .explore-folders-wrapper .container{
+        margin-left: 40px !important;
+    }
+    .container{
+        margin: 0 auto !important;
+        display: flex;
+        width: 100% !important;
+        flex-direction: column;
+       
+    }
+    .container .row{
+        max-width: 100% !important;
+    }
+    .card{
+        margin:0 auto !important;
+        margin-top: 20px !important;
+        margin-bottom: 30px !important;
 
+    }
+    .explore-folders-wrapper .container{
+        margin: 0px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .back-to-top{
+        width: 100%;
+        height: 100%;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    #bookmark {
+        width: 100px;
+        background-color: #264EA2;
+        margin: 0px;
+    }
+    #bookmark i {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        padding: 70px;
+        top: 33px;
+        right: 33px;
+        color: white;
+        font-size: 30px
+    }
+    
+    .main-footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-footer .contact {
+        margin: 0 auto !important;
+        padding: 20px 20px 0;
+        text-align: center;
+    
+    }
+    
+    .nav-col {
+        display: flex;
+        flex-direction: row;
+        margin: 6px;
+        padding: 20px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .ftr-nav-items p {
+        margin-left: 10px;
+    }
+    .footer-lower{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+    .img-wrap{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 25%;
+        justify-content: space-evenly;
+        padding: 0px 20px;
+    }
+    .img-wrap img{
+        margin: 5px;
+    }
+    .copyrights{
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .copyrights p{
+        text-align: center;
+    }
+    .copyrights ul#links li {
+        
+        padding: 5px;
+    }
+    .explore-text{
+        padding: 100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .col-md{
+        flex: 100%;
+        max-width: 100%;
+        margin: 0 auto !important;
+    }
+
+    #r2-card1 {
+        margin-top: 0px !important;
+    }
+    .create-folder{
+        float: none;
+        top: 50px;
+    }
 
 }
 
@@ -768,5 +961,23 @@ padding-left: 16px; */
    
 }
 
- 
-  
+#lock-image, #lock-image2, #lock-image3{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+}
+
+.icons-overlay i{
+    position: absolute;    
+    top: 0px;
+    right: 0px;
+    width: 35px;
+    background: #264EA2;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    padding: 6px;  
+}
