@@ -942,7 +942,10 @@ padding-left: 16px; */
     .create-folder{
         float: none;
         top: 50px;
+        width: 250px;
+        cursor: pointer;
     }
+    
 
 }
 
